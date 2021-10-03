@@ -9,7 +9,7 @@ deploys:
 
 image:
   repository: 'asia.gcr.io/study-gcp-project-323816/qltgcp'
-  tag: 0.0.1
+  tag: latest
   pullPolicy: IfNotPresent
 
 configMap:
