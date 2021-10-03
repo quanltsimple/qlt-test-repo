@@ -1,0 +1,21 @@
+deploys:
+- name: quanlt-helloworld-spring
+  replicasCount: 1
+  version: v1
+  service:
+    type: ClusterIP
+    containerPort:
+      api: 8088
+
+image:
+  repository: 'asia.gcr.io/study-gcp-project-323816/qltgcp'
+  tag: 0.0.1
+  pullPolicy: IfNotPresent
+
+configMap:
+  name: quanlt-helloworld-spring
+  application.properties: |-
+    server.port=8088
+
+ingress:
+  enabled: false
